@@ -1,0 +1,14 @@
+{
+  "name": "springsecuritywsclient",
+  "version": "1.0.0",
+  "description": "Sample Node Application for create web services client",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Antony",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
