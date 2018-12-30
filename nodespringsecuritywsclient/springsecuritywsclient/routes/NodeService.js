@@ -16,10 +16,11 @@ router.get('/listUsersTest', function (req, res) {
    });
 })
 
-router.get('/getUsers', function (req, res, next) {
+/* Retrieve All employee */
+router.get('/retrieveAllEmployee', function (req, res, next) {
    
-    var username = "antony";
-    var password1 = "123456";
+    var username = req.query.username;
+    var password1 = req.query.pass;
 
 	var body='';
     var options = {
@@ -37,7 +38,8 @@ router.get('/getUsers', function (req, res, next) {
 		if (err) {			
 			console.log("Error:"+err);
 		} else {
-			console.log("Final"+resData);			
+			console.log("Final"+resData);
+			res.setHeader('Content-Type', 'application/json');    
 			res.end(resData);
 		}
 	});
